@@ -148,16 +148,29 @@ public class Game {
      * @param grid 2D array of characters representing the game board
      * @return String indicating the outcome of the game: "X wins" or "O wins" or "Tie" or "None"
      */
-    public String checkGameWinner(char [][]grid){
+    public String checkGameWinner(char [][]grid) {
         String result = "None";
         //Student code goes here ...
-        return result;
-    }
+        if((grid[0][0]== 'x' && grid[0][1]== 'x' && grid[0][2]== 'x') || (grid[1][0]== 'x' && grid[1][1]== 'x' && grid[1][2]== 'x') || (grid[2][0]== 'x' && grid[1][1]== 'x' && grid[1][2]== 'x') || (grid[2][0]== 'x' && grid[2][1]== 'x' && grid[2][2]== 'x') || (grid[0][0]== 'x' && grid[1][0]== 'x' && grid[2][0]== 'x') || (grid[0][1]== 'x' && grid[1][1]== 'x' && grid[2][1]== 'x') || (grid[0][2]== 'x' && grid[1][2]== 'x' grid[2][2]== 'x') ||(grid[0][0]== 'x' && grid[1][1]== 'x' && grid[2][2]== 'x') || (grid[0][0]== 'x' && grid[1][1]== 'x' && grid[2][2]== 'x') || (grid[2][0]== 'x' && grid[1][1]== 'x' && grid[0][2]== 'x'))
+        {
 
+            result = "X wins";
+        }
+       else if ((grid[0][0]== '0' && grid[0][1]== '0' && grid[0][2]== '0') || (grid[1][0]== '0' && grid[1][1]== '0' && grid[1][2]== '0') || (grid[2][0]== '0' && grid[1][1]== '0' && grid[1][2]== '0') || (grid[2][0]== '0' && grid[2][1]== '0' && grid[2][2]== '0') || (grid[0][0]== '0' && grid[1][0]== '0' && grid[2][0]== '0') || (grid[0][1]== '0' && grid[1][1]== '0' && grid[2][1]== '0') || (grid[0][2]== '0' && grid[1][2]== '0' grid[2][2]== '0' ) ||(grid[0][0]== '0' && grid[1][1]== '0' && grid[2][2]== '0') || (grid[0][0]== '0' && grid[1][1]== '0' && grid[2][2]== '0') || (grid[2][0]== '0' && grid[1][1]== '0' && grid[0][2]== '0'))
+        {
+            result = "0 wins";
+        }
+         else if ((grid[0][0]!= '-' && grid[0][1]!= '-' && grid[0][2]!= '-' && grid[1][0]!= '-' && grid[1][1]!= '-' && grid[1][2]!= '-' && grid[2][0]!= '-' && grid[1][1]!= '-' && grid[1][2]!= '-' && grid[2][0]!= '-' && grid[2][1]!= '-' && grid[2][2]!= '-')){
+            result = "Tie";}
+
+        //iiiiiiiiiiiiii
+         return result;
+    }
     /**
-     * Main function
-     * @param args command line arguments
-     */
+             * Main function
+             * @param args command line arguments
+             */
+        }
     public static void main(String args[]){
         Game game = new Game();
         gui = new GameUI(game);
