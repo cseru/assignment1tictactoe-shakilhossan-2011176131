@@ -160,8 +160,7 @@ public class Game {
         {
             result = "0 wins";
         }
-         else if ((grid[0][0]!= '-' && grid[0][1]!= '-' && grid[0][2]!= '-' && grid[1][0]!= '-' && grid[1][1]!= '-' && grid[1][2]!= '-' && grid[2][0]!= '-' && grid[1][1]!= '-' && grid[1][2]!= '-' && grid[2][0]!= '-' && grid[2][1]!= '-' && grid[2][2]!= '-')){
-            result = "Tie";}
+        for (int i = 0; i <3; i ++) {for (int j = 0; j <3; j ++) {if (grid [i] [j] == '-') return "None"; }
 
         //iiiiiiiiiiiiii
          return result;
